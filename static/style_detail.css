@@ -1,0 +1,110 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul, li, table {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and font for the whole page */
+body {
+    background-color: #f7f7f7;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header with a background color, padding, and center the logo */
+.main_header {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Style the logo image */
+.img_logo {
+    max-width: 150px;
+}
+
+/* Center the content in the main section */
+main {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Style the restaurant name */
+.detail_item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.detail_left span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style the restaurant info table */
+.info {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.info th {
+    text-align: left;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.info td {
+    padding-left: 10px;
+}
+
+/* Style the menu section */
+.menu {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.menu h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo_text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.footer_text {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.footer_copy {
+    font-size: 12px;
+    margin-top: 10px;
+}

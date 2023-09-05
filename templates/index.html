@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 브라우저 호환성 및 화면 크기 설정 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 스타일시트 링크 -->
+    <link rel="stylesheet" href="/static/styles.css">
+
+    <!-- 스타일 추가 (레전드가 화면에 보이지 않게 함) -->
+    <style>
+        .visually-hidden {
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            clip: rect(1px 1px 1px 1px);
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더 섹션 -->
+    <header class="header">
+        <a href="/">
+            <img src = 'static/Logo.png' class="img_logo">
+        </a>
+        <button class="btn" onclick="location.href='/add'">
+            가게추가하기
+        </button> 
+    </header>
+    
+    <!-- 메인 섹션 -->
+    <main>
+        <div>
+            <div class="maintitle">
+                <h2>양재역 맛집 리스트</h2>
+            </div>
+
+            <!-- 검색 바 섹션 -->
+            <div class="searchbar">
+                <!-- 검색 폼 추가 -->
+                <form action="/list" method="POST">
+                    <fieldset>
+                        <!-- 레전드 엘리먼트 (접근성을 위해 화면에서 보이지 않게 함) -->
+                        <legend class="visually-hidden">검색</legend>
+                        <div class="search_box">
+                            <input type="text" name="query" placeholder="검색어 입력" maxlength="225" tabindex="1" />
+                            <button type="submit" tabindex="2">
+                                검색
+                            </button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <!-- 컨텐츠 섹션 -->
+        <div class="content">
+            <ul class="content_detail">
+                <!-- 루프를 통해 데이터 출력 -->
+                {% for item in data %}
+                <li class="content_item">
+                    <div class="content_item_inner">
+                        <a href="/list.html">
+                            <figure>
+                                <div class="content_item_img">
+                                    <img src="static/Logo.png" class="content_img">
+                                </div>
+                                <figcaption>
+                                    <div class="content_info">
+                                        <span>{{item.id}}</span> <!-- 레스토랑 이름 -->
+                                        <p class="content_address">{{item.name}}</p> <!-- 주소 -->
+                                    </div>
+                                </figcaption>    
+                            </figure>
+                        </a>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </main>
+    
+    <!-- 푸터 섹션 -->
+    <footer class="footer">
+        <span calss="logo_text">양.많.다</span> <!-- 오타 수정: "calss" -> "class" -->
+        <P class="footer_text">Find your Best Restaurant</P>
+        <div class="footer_copy">Copyright 2023 양.많.다., Inc. Terms & Privacy</div>
+    </footer>
+</body>
+</html>

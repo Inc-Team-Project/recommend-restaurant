@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 브라우저 호환성 설정 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 뷰포트 설정 (반응형 디자인을 위해 화면 크기 조정) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 외부 스타일시트 링크 -->
+    <link rel="stylesheet" href="/static/style_add.css">
+    
+    <!-- 스타일 추가 (레전드가 화면에 보이지 않게 함) -->
+    <style>
+        .visually-hidden {
+            position: absolute !important;
+            height: 1px;
+            width: 1px;
+            overflow: hidden;
+            clip: rect(1px 1px 1px 1px);
+            clip: rect(1px, 1px, 1px, 1px);
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <!-- 헤더 섹션 -->
+    <header class="main_header">
+        <div>
+            <!-- 홈페이지로 돌아가는 로고 이미지 -->
+            <a href="/">
+                <img src="static/Logo.png" class="img_logo">
+            </a>
+        </div>
+    </header>
+    
+    <!-- 메인 섹션 (가게 정보 입력 폼) -->
+    <main class="add_form">
+        <div class="form_div">
+            <form method="POST" action="/add">
+                <!-- 가게 이름 입력 필드 -->
+                <label for="REST_Name">가게 이름:</label>
+                <input type="text" id="REST_Name" name="REST_Name" required><br><br>
+
+                <!-- 음식 종류 입력 필드 -->
+                <label for="REST_Type">음식 종류(한식, 일식, 중식):</label>
+                <input type="text" id="REST_Type" name="REST_Type" required><br><br>
+               
+                <!-- 주소 입력 필드 -->
+                <label for="REST_Address">주소:</label>
+                <input type="text" id="REST_Address" name="REST_Address" required><br><br>
+                
+                <!-- 웹사이트 입력 필드 -->
+                <label for="REST_Web">웹사이트:</label>
+                <input type="text" id="REST_Web" name="REST_Web"><br><br>
+                
+                <!-- 전화번호 입력 필드 -->
+                <label for="Tel">전화번호:</label>
+                <input type="text" id="Tel" name="Tel" required><br><br>
+                
+                <!-- 메뉴 이름 입력 필드 -->
+                <label for="MENU_Name">메뉴 이름:</label>
+                <input type="text" id="MENU_Name" name="MENU_Name" required><br><br>
+                
+                <!-- 메뉴 가격 입력 필드 -->
+                <label for="MENU_Price">메뉴 가격:</label>
+                <input type="text" id="MENU_Price" name="MENU_Price" required><br><br>
+                
+                <!-- 저장 버튼 -->
+                <input type="submit" value="저장">
+            </form>
+        </div>
+    </main>
+    
+    <!-- 푸터 섹션 -->
+    <footer class="footer">
+        <!-- 로고 및 웹사이트 설명 -->
+        <span class="logo_text">양.많.다</span>
+        <P class="footer_text">Find your Best Restaurant</P>
+        <!-- 저작권 정보 및 개인정보 처리 방침 표시 -->
+        <div class="footer_copy">Copyright 2023 양.많.다., Inc. Terms & Privacy</div>
+    </footer>
+</body>
+</html>

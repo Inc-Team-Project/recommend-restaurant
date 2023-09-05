@@ -1,0 +1,180 @@
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.search_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    text-decoration: none;
+}
+
+button[type="submit"] {
+    background-color: #f5a623; /* 노랑 */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff3d00; /* 빨강 */
+}
+
+/* '가게 추가하기' 버튼 스타일 */
+.add-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f5a623; /* 노랑 */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+/* 오름차순과 내림차순 정렬 버튼 스타일 */
+.sort-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px; /* 버튼 텍스트 크기 조절 */
+    font-weight: bold; /* 버튼 텍스트 굵게 설정 */
+}
+
+.sort-button:hover {
+    background-color: #2980b9;
+}
+
+.add-button:hover {
+    background-color: #ff3d00; /* 빨강 */
+}
+
+/* 오름차순 버튼 스타일 */
+.sort-asc-button {
+    background-color: #2ecc71;
+}
+
+/* 내림차순 버튼 스타일 */
+.sort-desc-button {
+    background-color: #e74c3c;
+}
+/* 데이터 리스트 가로로 길게 나오도록 수정 */
+.content_detail {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+
+.content_item {
+    flex: 0 0 calc(50% - 20px); /* 3개 항목 가로 배치 + 간격 조정 */
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+
+.content_item:last-child {
+    margin-right: 0;
+    text-decoration: none;
+}
+
+.content_item_inner {
+    padding: 10px;
+    text-decoration: none;
+}
+
+.content_info span {
+    color: #333;
+    text-decoration: none; /* 밑줄 삭제 */
+}
+
+span {
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.content_address, p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+    background-color: #ffffff;
+    color: #fff;
+}
+
+.logo_text {
+    font-size: 24px;
+    font-weight: bold;
+    color:#333
+}
+
+.footer_text {
+    font-size: 16px;
+    margin-top: 10px;
+    color:#333
+}
+
+.footer_copy {
+    font-size: 14px;
+    margin-top: 10px;
+    color:#333
+}
