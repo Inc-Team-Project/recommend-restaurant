@@ -1,18 +1,51 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <!-- (이전 내용과 동일) -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Detail</title>
+    <link rel="stylesheet" href="/static/style_detail.css">
 </head>
 <body>
     <header class="main_header">
-        <!-- (이전 내용과 동일) -->
+        <div>
+            <a href="/">
+                <img src="/static/Logo.png" class="img_logo" alt="양.많.다 로고">
+            </a>
+        </div>
+        <div class="searchbar_detail">
+            <form>
+                <fieldset>
+                    <legend class="visually-hidden">검색</legend>
+                    <div class="search_box">
+                        <input type="text" placeholder="상세페이지" maxlength="225" tabindex="1" />
+                        <button type="submit" tabindex="2">검색</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
     </header>
-    
     <main>
         <div class="detail_item">
-            <!-- (이전 내용과 동일) -->
+            <div class="detail_left">
+                <span>{{ rest_info_data.REST_Name }}</span>
+            </div>
+            <div class="detail_right">
+                <table class="info">
+                    <tbody>
+                        <tr>
+                            <th>주소</th>
+                            <td>{{ rest_info_data.REST_Address }}</td>
+                        </tr>
+                        <tr>
+                            <th>전화번호</th>
+                            <td>{{ rest_info_data.Tel }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        
         <div class="menu">
             <h3>메뉴</h3>
             <ul>
@@ -29,7 +62,8 @@
             <ul>
                 {% for review in rest_review_data %}
                 <li>
-                    <span>{{ review.R_Score }}</span> - {{ review.R_Text }} - {{ review.R_Date }}
+                    <span>{{ review.R_Score }}</span> - {{ review.R_Text }}
+                    <p>날짜: {{ review.R_Date }}</p>
                 </li>
                 {% endfor %}
             </ul>
@@ -42,9 +76,10 @@
             </form>
         </div>
     </main>
-    
     <footer class="footer">
-        <!-- (이전 내용과 동일) -->
+        <span class="logo_text">양.많.다</span>
+        <P class="footer_text">Find your Best Restaurant</P>
+        <div class="footer_copy">Copyright 2023 양.많.다., Inc. Terms & Privacy</div>
     </footer>
 </body>
 </html>

@@ -60,7 +60,6 @@ main {
 .info td {
     padding-left: 10px;
 }
-
 /* Style the menu section */
 .menu {
     background-color: #fff;
@@ -68,6 +67,7 @@ main {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     text-align: left;
+    margin-bottom: 20px; /* Add margin to separate menu and comments */
 }
 
 .menu h3 {
@@ -85,6 +85,55 @@ main {
     font-size: 16px;
     margin-bottom: 5px;
 }
+
+/* Style the comments section */
+.comments {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+.comments h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comments ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.comments li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* Style the comment form */
+.comments form {
+    margin-top: 20px;
+}
+
+.comments input[type="text"],
+.comments textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comments button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 
 /* Style the footer */
 .footer {
