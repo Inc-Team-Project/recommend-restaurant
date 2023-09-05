@@ -93,5 +93,19 @@ def go(web_address):
     # web_address에 해당하는 URL로 리다이렉트
     return redirect(web_address)
 
+# Flask 앱의 댓글 관련 라우트
+@app.route('/add_review/<string:rest_name>', methods=['POST'])
+def add_review(rest_name):
+    if request.method == 'POST':
+        R_Score = request.form['R_Score']
+        R_Text = request.form['R_Text']
+
+        # REST_REVIEW 테이블에 데이터 추가
+        review = REST_REVIEW(REST_Name=rest_name, R_Score=R_Score, R_Text=R_Text)
+        db.session.add(review)
+        db.session.commit()
+
+    return redirect(url_for('detail', rest_name=rest_name))
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
