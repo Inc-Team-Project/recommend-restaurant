@@ -2,7 +2,7 @@
 
 $ git init
 
-필요하다면 다음의 명령을 사용하여 환경변수를 등록하세요. $ git config --local user.email 'xodbs1123@naver.com'
+필요하다면 다음의 명령을 사용하여 환경변수를 등록하세요. $ git config --local user.email 'ty6593@naver.com'
 
 $ git config --local user.name 'YOUR NAME'
 
