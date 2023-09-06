@@ -67,9 +67,11 @@
                 <input type="text" id="MENU_Price" name="MENU_Price" required><br><br>
                 
                 <!-- 저장 버튼 -->
-                <input type="submit" value="저장">
+                <input type="submit" value="저장" id="save-button">
             </form>
+            
         </div>
+
     </main>
     
     <!-- 푸터 섹션 -->
@@ -80,5 +82,34 @@
         <!-- 저작권 정보 및 개인정보 처리 방침 표시 -->
         <div class="footer_copy">Copyright 2023 양.많.다., Inc. Terms & Privacy</div>
     </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 저장 버튼 클릭 시 동작
+            const saveButton = document.getElementById('save-button');
+            event.preventDefault(); // 기본 동작 방지 (폼 제출 방지)
+            saveButton.addEventListener('click', (event) => {
+                const restNameInput = document.getElementById('REST_Name');
+                const restTypeInput = document.getElementById('REST_Type');
+                const restAddressInput = document.getElementById('REST_Address');
+                const telInput = document.getElementById('Tel');
+                const menuNameInput = document.getElementById('MENU_Name');
+                const menuPriceInput = document.getElementById('MENU_Price');
+        
+                if (
+                    restNameInput.value.trim() === '' ||
+                    restTypeInput.value.trim() === '' ||
+                    restAddressInput.value.trim() === '' ||
+                    telInput.value.trim() === '' ||
+                    menuNameInput.value.trim() === '' ||
+                    menuPriceInput.value.trim() === ''
+                ) {
+                   
+                } else {
+                    alert('가게가 추가되었습니다.'); // 메시지 출력
+                }
+            });
+        });
+          
+    </script>
 </body>
 </html>

@@ -1,9 +1,15 @@
 body {
+    background-size: cover; 
+    background-repeat: no-repeat;
     margin:0;
     font-family: sans-serif;
+    
 }
 main {
-    background: gray;
+    /* background-image: url('https://i.namu.wiki/i/6TqpEU_Pplwn7kjjVifjOw3DzQ4FnQoRv-E9W1wjOaSImclPYHDkngm8m6l8MbyBqVIlWlfYvsnHHT-Fo0lsRA.webp');
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background: lightgray; */
     min-height: 580px;
 }
 a{    
@@ -13,33 +19,33 @@ a{
     text-align: center;
     margin-top: 40px;
     padding: 20px 0;
-    background-color: #ffffff;
-    color: #333;
+    background-color: #413e3e;
+    color: #ffffff;
 }
 
 .logo_text {
     font-size: 24px;
     font-weight: bold;
-    color:#333
+    color:#ffffff
 }
 
 .footer_text {
     font-size: 16px;
     margin-top: 10px;
-    color:#333
+    color:#ffffff
 }
 
 .footer_copy {
     font-size: 14px;
     margin-top: 10px;
-    color:#333
+    color:#ffffff
 }
 
 /* 헤더 */
 header {
     margin: auto;
     width: flex;
-    height: 70px;
+    height: 0px;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -94,7 +100,7 @@ fieldset{
     top: 10%;
 }
 .search_box input {
-    flex: 9; /* search-box내부에서 9만큼의 크기를 차지(비율) */
+    flex: 12; /* search-box내부에서 9만큼의 크기를 차지(비율) */
     height: 46px;
     padding-left: 12px;
     padding-right: 12px;
@@ -106,21 +112,22 @@ fieldset{
   .search_box button {
     flex: 2; /* search-box내부에서 1만큼의 크기를 차지(비율) */
     height: 46px;
-    width: 40px;
+    width: 90px;
     margin: 0;
     padding: 0;
     border: none;
     outline: none;
-    background: #03cf5d;
+    background: #ff9a0c;
     color: #ffffff;
     border-radius: 8px;
   }
 /*content 목록*/
 .content{
-    position:absolute;
-    left: 10%;
-    right:10%;
-    top: 40%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 350px;
 }
 .content_detail{
     margin-left: 90px;
@@ -137,9 +144,11 @@ li{
     width: 25%;
     position: relative;
 }
-
-.content_content{
-    text-decoration: none;
+.content_btn{
+    width: 200px;
+    height: 120px;
+    margin: 20px;
+    font-size: 17px;
 }
 .content_item_img{
     margin:0;

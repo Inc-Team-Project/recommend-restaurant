@@ -1,7 +1,12 @@
 a {
     text-decoration: none;
 }
-
+.content_item img {
+    max-width: 100%;
+    height: auto;
+    border: 7px solid #333; /* 원하는 테두리 스타일 및 색상 설정 */
+    border-radius: 4px; /* 테두리의 모서리를 둥글게 만듭니다. */
+}
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;

@@ -8,78 +8,255 @@
     <link rel="stylesheet" href="/static/style_detail.css">
 </head>
 <body>
-    <header class="main_header">
-        <div>
-            <a href="/">
-                <img src="/static/Logo.png" class="img_logo" alt="양.많.다 로고">
-            </a>
+<header class="main_header">
+    <div>
+        <a href="/">
+            <img src="/static/Logo.png" class="img_logo" alt="양.많.다 로고">
+        </a>
+    </div>
+
+</header>
+<main>
+    <div class="detail_item">
+        <div class="detail_left">
+            <span>{{ rest_info_data.REST_Name }}</span>
+            <span class="part">|</span>
         </div>
-        <div class="searchbar_detail">
-            <form>
-                <fieldset>
-                    <legend class="visually-hidden">검색</legend>
-                    <div class="search_box">
-                        <input type="text" placeholder="상세페이지" maxlength="225" tabindex="1" />
-                        <button type="submit" tabindex="2">검색</button>
-                    </div>
-                </fieldset>
-            </form>
+        <div class="detail_right">
+            <table class="info">
+                <tbody>
+                    <tr>
+                        <th>주소</th>
+                        <td>{{ rest_info_data.REST_Address }}</td>
+                    </tr>
+                    <tr>
+                        <th>전화번호</th>
+                        <td>{{ rest_info_data.Tel }}</td>
+                    </tr>
+                    <tr>
+                        <th>Url</th>
+                        <td><a href="{{ rest_info_data.REST_Web }}" target="_blank">{{ rest_info_data.REST_Web }}</a></td>
+                    </tr>
+                    <tr>
+                        <th>음식종류</th>
+                        <td>{{ rest_info_data.REST_Type }}</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-    </header>
-    <main>
-        <div class="detail_item">
-            <div class="detail_left">
-                <span>{{ rest_info_data.REST_Name }}</span>
-            </div>
-            <div class="detail_right">
-                <table class="info">
-                    <tbody>
-                        <tr>
-                            <th>주소</th>
-                            <td>{{ rest_info_data.REST_Address }}</td>
-                        </tr>
-                        <tr>
-                            <th>전화번호</th>
-                            <td>{{ rest_info_data.Tel }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="menu">
-            <h3>메뉴</h3>
-            <ul>
-                {% for menu_item in rest_menu_data %}
-                <li>{{ menu_item.MENU_Name }} - {{ menu_item.MENU_Price }}</li>
-                {% endfor %}
-            </ul>
-        </div>
+    </div>
+    <div class="menu">
+        <h3>메뉴</h3>
+        <ul>
+            {% for menu_item in rest_menu_data %}
+            <li>{{ menu_item.MENU_Name }} - {{ menu_item.MENU_Price }}</li>
+            {% endfor %}
+        </ul>
+    </div>
 
         <!-- 댓글 섹션 -->
         <div class="comments">
             <h3>댓글</h3>
             <!-- 댓글 목록 -->
             <ul>
-                {% for review in rest_review_data %}
+                {% for review in rest_review_data if review.REST_Name == rest_info_data.REST_Name %}
                 <li>
-                    <span>{{ review.R_Score }}</span> - {{ review.R_Text }}
-                    <p>날짜: {{ review.R_Date }}</p>
+                    <strong>평점:</strong> {{ review.R_Score }}<br>
+                    <strong>내용:</strong> {{ review.R_Text }}<br>
+                    <strong>날짜:</strong> {{ review.R_Date }}
+
+                    <!-- 수정 버튼 -->
+                    <button class="edit-button" data-review-id="{{ review.Num }}">수정</button>
+
+                    <!-- 댓글 삭제 버튼 -->
+                    <button class="delete-button" data-review-id="{{ review.Num }}">삭제</button>
+
+                    <!-- 삭제 확인을 위한 비밀번호 입력 폼 (초기에는 숨김) -->
+        <div class="password-form hidden" data-review-id="{{ review.Num }}">
+            <input type="password" class="password-input" placeholder="비밀번호" required>
+            <button class="confirm-delete-button" data-review-id="{{ review.Num }}">확인</button>
+        </div>    
                 </li>
+                <!-- 수정 폼 (숨겨진 상태) -->
+                <form class="edit-form hidden" data-review-id="{{ review.Num }}" action="{{ url_for('edit_review', review_id=review.Num) }}" method="POST">
+                    <!-- 평점 -->
+                    <div class="star-rating">
+                        <input type="radio" id="edit-star1-{{ review.Num }}" name="R_Score" value="1" {% if review.R_Score == '1' %}checked{% endif %}>
+                        <label for="edit-star1-{{ review.Num }}" class="star">&#9733;</label>
+                        <input type="radio" id="edit-star2-{{ review.Num }}" name="R_Score" value="2" {% if review.R_Score == '2' %}checked{% endif %}>
+                        <label for="edit-star2-{{ review.Num }}" class="star">&#9733;</label>
+                        <input type="radio" id="edit-star3-{{ review.Num }}" name="R_Score" value="3" {% if review.R_Score == '3' %}checked{% endif %}>
+                        <label for="edit-star3-{{ review.Num }}" class="star">&#9733;</label>
+                        <input type="radio" id="edit-star4-{{ review.Num }}" name="R_Score" value="4" {% if review.R_Score == '4' %}checked{% endif %}>
+                        <label for="edit-star4-{{ review.Num }}" class="star">&#9733;</label>
+                        <input type="radio" id="edit-star5-{{ review.Num }}" name="R_Score" value="5" {% if review.R_Score == '5' %}checked{% endif %}>
+                        <label for="edit-star5-{{ review.Num }}" class="star">&#9733;</label>
+                    </div>
+                    <input type="text" name="R_Score" placeholder="평점" value="{{ review.R_Score }}" style="display: none;" required>
+
+                    <textarea name="R_Text" placeholder="수정 내용" required>{{ review.R_Text }}</textarea>
+                    <button type="submit">댓글 수정</button>
+                </form>
+
                 {% endfor %}
             </ul>
-
-            <!-- 댓글 작성 폼 -->
-            <form action="{{ url_for('add_review', rest_name=rest_info_data.REST_Name) }}" method="POST">
-                <input type="text" name="R_Score" placeholder="평점" required>
-                <textarea name="R_Text" placeholder="댓글 내용" required></textarea>
-                <button type="submit">댓글 작성</button>
-            </form>
         </div>
-    </main>
-    <footer class="footer">
-        <span class="logo_text">양.많.다</span>
-        <P class="footer_text">Find your Best Restaurant</P>
-        <div class="footer_copy">Copyright 2023 양.많.다., Inc. Terms & Privacy</div>
-    </footer>
+
+        <!-- 댓글 작성 폼 -->
+        <form id="rating-form" action="{{ url_for("add_review", rest_name=rest_info_data.REST_Name) }}" method="POST">
+            <div class="star-rating">
+                <input type="radio" id="star1" name="R_Score" value="1">
+                <label for="star1" class="star">&#9733;</label>
+                <input type="radio" id="star2" name="R_Score" value="2">
+                <label for="star2" class="star">&#9733;</label>
+                <input type="radio" id="star3" name="R_Score" value="3">
+                <label for="star3" class="star">&#9733;</label>
+                <input type="radio" id="star4" name="R_Score" value="4">
+                <label for="star4" class="star">&#9733;</label>
+                <input type="radio" id="star5" name="R_Score" value="5">
+                <label for="star5" class="star">&#9733;</label>
+            </div>
+            <textarea name="R_Text" placeholder="댓글 내용" required></textarea>
+            <button type="댓글 작성">댓글 작성</button>
+        </form>
+
+        <style>
+            .star-rating input[type="radio"] {
+                display: none; 
+            }
+
+            .star-rating .star {
+                font-size: 30px;
+                color: #ccc;
+                cursor: pointer;
+                transition: color 0.2s;
+            }
+
+            .star-rating .star.active {
+                color: gold; 
+            }
+        </style>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const editForms = document.querySelectorAll('.edit-form');
+        
+                editForms.forEach((editForm) => {
+                    editForm.style.display = 'none';
+                });
+        
+                const editButtons = document.querySelectorAll('.edit-button');
+        
+                editButtons.forEach((button) => {
+                    button.addEventListener('click', (event) => {
+                        event.preventDefault(); // 폼 제출 방지
+                        const reviewId = button.getAttribute('data-review-id');
+                        toggleEditForm(reviewId);
+                    });
+                });
+        
+                const confirmDeleteButtons = document.querySelectorAll('.confirm-delete-button');
+        
+                confirmDeleteButtons.forEach((button) => {
+                    button.addEventListener('click', (event) => {
+                        event.preventDefault(); // 폼 제출 방지
+                        const reviewId = button.getAttribute('data-review-id');
+                        const passwordInput = button.parentElement.querySelector('.password-input');
+                        const password = passwordInput.value;
+        
+                        // 서버로 비밀번호와 함께 삭제 요청을 보냅니다.
+                        fetch(`/delete_review/${reviewId}`, {
+                            method: 'POST',
+                            body: JSON.stringify({ password: password }),
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                        })
+                        .then((response) => {
+                            if (response.ok) {
+                                // 삭제 성공한 경우
+                                const reviewItem = document.querySelector(`li[data-review-id="${reviewId}"]`);
+                                location.reload();
+                                if (reviewItem) {
+                                    reviewItem.remove();
+                                     // 페이지 새로고침
+                                }
+                            } else if (response.status === 403) {
+                                // 비밀번호가 틀린 경우
+                                alert('비밀번호가 올바르지 않습니다.');
+                            }
+                        })
+                        .catch((error) => {
+                            console.error('댓글 삭제 오류:', error);
+                        });
+                    });
+                });
+        
+                function toggleEditForm(reviewId) {
+                    const editForm = document.querySelector(`form.edit-form[data-review-id="${reviewId}"]`);
+        
+                    if (editForm.style.display === 'none' || editForm.style.display === '') {
+                        editForm.style.display = 'block';
+                    } else {
+                        editForm.style.display = 'none';
+                    }
+                }
+            });
+        
+            document.addEventListener('DOMContentLoaded', function () {
+                const stars = document.querySelectorAll('.star-rating .star');
+                const ratingForm = document.getElementById('rating-form');
+        
+                stars.forEach((star, index) => {
+                    star.addEventListener('click', () => {
+                        stars.forEach((s, i) => {
+                            if (i <= index) {
+                                s.classList.add('active');
+                            } else {
+                                s.classList.remove('active');
+                            }
+                        });
+                        document.querySelector(`.star-rating input[value="${index + 1}"]`).checked = true;
+                    });
+                });
+            });
+        </script>
+        
+        
+    </div>
+    <!-- 수정 창 숨겼다가 삭제 버튼 클릭시 OPEN -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const deleteButtons = document.querySelectorAll('.delete-button');
+    
+            deleteButtons.forEach((button) => {
+                button.addEventListener('click', (event) => {
+                    event.preventDefault(); // 폼 제출 방지
+                    const reviewId = button.getAttribute('data-review-id');
+                    const passwordForm = document.querySelector(`.password-form[data-review-id="${reviewId}"]`);
+    
+                    // 비밀번호 입력 폼 토글
+                    if (passwordForm.style.display === 'none' || passwordForm.style.display === '') {
+                        passwordForm.style.display = 'block';
+                    } else {
+                        passwordForm.style.display = 'none';
+                    }
+                });
+            });
+    
+            // 초기에 비밀번호 입력 폼 숨김
+            const passwordForms = document.querySelectorAll('.password-form');
+            passwordForms.forEach((form) => {
+                form.style.display = 'none';
+            });
+        });
+    </script>
+</main>
+
+<footer class="footer">
+    <span class="logo_text">양.많.다</span>
+    <P class="footer_text">Find your Best Restaurant</P>
+    <div class="footer_copy">Copyright 2023 양.많.다., Inc. Terms & Privacy</div>
+</footer>
+
 </body>
 </html>

@@ -14,7 +14,7 @@ body {
 .main_header {
     background-color: #333;
     padding: 20px 0;
-    text-align: center;
+    text-align: left;
 }
 
 /* Style the logo image */
@@ -39,12 +39,27 @@ main {
     align-items: center;
     margin-bottom: 20px;
 }
-
+.detail_left{
+    text-align: right;
+    padding-right: 20px;    
+    float:left;
+    width:45%;
+}
 .detail_left span {
     font-size: 24px;
     font-weight: bold;
 }
-
+.detail_right{
+    width: 55%;
+    float: right;
+    padding-left: 10px;
+    border-left:2px solid #FF7200;
+}
+.part{
+    color: #FF7200;
+    font-size: 24px;
+    font-weight: bold;
+}
 /* Style the restaurant info table */
 .info {
     width: 100%;
@@ -54,11 +69,10 @@ main {
 .info th {
     text-align: left;
     font-weight: bold;
-    padding-right: 10px;
 }
 
 .info td {
-    padding-left: 10px;
+    text-align: left;
 }
 /* Style the menu section */
 .menu {
@@ -135,6 +149,90 @@ main {
 }
 
 
+/* 스타 평점 표시 스타일 */
+.star-rating {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.star-rating .star {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+
+/* Style the comment form */
+.comments form {
+    margin-top: 20px;
+}
+
+.comments input[type="text"],
+
+.comments textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comments button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 댓글 작성 폼 스타일 */
+#rating-form {
+    margin-top: 20px;
+}
+
+#rating-form .star-rating {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#rating-form .star-rating .star {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+#rating-form .star-rating .star.active {
+    color: gold; /* 선택된 별표의 색상을 골드로 변경 */
+}
+
+#rating-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+#rating-form button[type="댓글 작성"] {
+    display: block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#rating-form button[type="댓글 작성"]:hover {
+    background-color: #0056b3;
+}
+
 /* Style the footer */
 .footer {
     background-color: #333;
@@ -158,3 +256,25 @@ main {
     margin-top: 10px;
 }
 
+/* 댓글 목록 스타일 */
+.comments ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.comments li {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.comments li span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.comments li p {
+    margin: 0;
+}

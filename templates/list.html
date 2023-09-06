@@ -16,8 +16,9 @@
                 가게 추가하기
             </button>
             <!-- 검색 폼 추가 -->
-            <form action="/list" method="POST" class="search_box">
-                <input type="text" name="query" placeholder="검색어 입력" maxlength="225" tabindex="1" />
+            <form action="/list" method="POST" class="search_box" id="searchForm">
+                <!-- 검색어 입력 필드에 이전에 입력한 값을 표시 -->
+                <input type="text" name="query" placeholder="검색어 입력" maxlength="225" tabindex="1" value="{{ query|default('') }}" />
                 <button type="submit" tabindex="2">검색</button>
             </form>
             <!-- 정렬 버튼 -->
@@ -25,6 +26,7 @@
                 <button class="sort-button sort-asc-button" onclick="sortResults('asc')">오름차순 정렬</button>
                 <button class="sort-button sort-desc-button" onclick="sortResults('desc')">내림차순 정렬</button>
             </div>
+           
             <!-- 검색 결과 목록 -->
             <ul class="content_detail">
                 {% for item in results %}
@@ -36,11 +38,35 @@
                                     <div class="content_info">
                                         <!-- 이미지 대신 REST 정보 표시 -->
                                         <a href="{{ url_for('detail', rest_name=item.REST_Name) }}">
+                                            <figure>
+                                                <!-- 음식 종류에 따라 이미지를 표시합니다. -->
+                                                {% if item.REST_Type == '한식' %}
+                                                <div class="content_item_img">
+                                                    <img src="static/hansik.jpeg" alt="한식 이미지">
+                                                </div>
+                                                {% elif item.REST_Type == '일식' %}
+                                                <div class="content_item_img">
+                                                    <img src="static/ilsik.jpeg" alt="일식 이미지">
+                                                </div>
+                                                {% elif item.REST_Type == '중식' %}
+                                                <div class="content_item_img">
+                                                    <img src="static/jungsik.jpeg" alt="중식 이미지">
+                                                </div>
+                                                {% elif item.REST_Type == '경양식' %}
+                                                <div class="content_item_img">
+                                                    <img src="static/yangsik.jpeg" alt="경양식 이미지">
+                                                </div>
+                                                {% elif item.REST_Type == '분식' %}
+                                                <div class="content_item_img">
+                                                    <img src="static/bunsik.jpeg" alt="분식 이미지">
+                                                </div>
+                                                {% endif %}
+                                                <figcaption>
                                             <span>{{ item.REST_Name }}</span>
                                         </a>
                                         <p class="content_address">주소 : {{ item.REST_Address }}</p>
-                                        <p> Url : <a href="{{ url_for('go', web_address=item.REST_Web) }}" target="_blank">{{ item.REST_Web }}</a></p>
                                         <p>전화번호 : {{ item.Tel }}</p>
+                                        
                                     </div>
                                 </figcaption>
                             </figure>
@@ -49,6 +75,7 @@
                 </li>
                 {% endfor %}
             </ul>
+                        
         </main>
         <footer class="footer">
             <span class="logo_text">양.많.다</span>
@@ -57,14 +84,26 @@
         </footer>
     </div>
 
-    <!-- JavaScript 코드 추가 -->
     <script>
         let sortOrder = 'asc'; // 초기 정렬 순서
 
         // 페이지 로드 시 기본 정렬 (오름차순)
         window.onload = function() {
             sortResults(sortOrder);
+            // 페이지 로드 시 저장된 검색어를 검색 폼에 설정
+            const searchForm = document.getElementById('searchForm');
+            const query = localStorage.getItem('searchQuery');
+            if (query) {
+                searchForm.querySelector('input[name="query"]').value = query;
+            }
         }
+
+        const searchForm = document.getElementById('searchForm');
+        searchForm.addEventListener('submit', function(event) {
+            // 검색 폼 제출 시 검색어를 로컬 스토리지에 저장
+            const queryInput = searchForm.querySelector('input[name="query"]');
+            localStorage.setItem('searchQuery', queryInput.value);
+        });
 
         function sortResults(order) {
             const contentDetail = document.querySelector('.content_detail');
@@ -90,5 +129,8 @@
             sortOrder = order;
         }
     </script>
+</body>
+</html>
+
 </body>
 </html>
