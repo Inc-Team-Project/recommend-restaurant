@@ -34,54 +34,12 @@ header {
     left: 10px;
     top: 5px;
 }
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #fff;
-}
-
-h2 {
-    font-size: 24px;
-    margin-top:0px;
-    margin-bottom: 0;
-    text-decoration: none;
-}
-
 .search_box {
     
     display: flex;
     align-items: center;
     margin-left: 40px;
 }
-
-input[type="text"] {
-    flex: 1;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    outline: none;
-    text-decoration: none;
-}
-
-button[type="submit"] {
-    background-color: #FF7200; /* 노랑 */
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 9px 15px;
-    font-size: 14px;
-    cursor: pointer;
-    outline: none;
-    transition: background-color 0.3s;
-    margin-left:10px;
-}
-
-button[type="submit"]:hover {
-    background-color: #ff3d00; /* 빨강 */
-}
-
 /* '가게 추가하기' 버튼 스타일 */
 .add-button {
     position: absolute;
@@ -97,7 +55,45 @@ button[type="submit"]:hover {
     transition: background-color 0.3s;
     margin:20px;
 }
+/* 검색결과 */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+h2 {
+    font-size: 24px;
+    margin-top:0px;
+    margin-bottom: 0;
+    text-decoration: none;
+}
 
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+    text-decoration: none;
+}
+button[type="submit"] {
+    background-color: #FF7200; /* 노랑 */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 9px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s;
+    margin-left:10px;
+}
+/* 버튼에 마우스올렸을때 색상변경 */
+button[type="submit"]:hover {
+    background-color: #ff3d00; /* 빨강 */
+} 
 /* 오름차순과 내림차순 정렬 버튼 스타일 */
 .sort-button {
     /* background-color: #3498db; */
@@ -112,20 +108,16 @@ button[type="submit"]:hover {
     font-weight: bold; /* 버튼 텍스트 굵게 설정 */
     float: right;
 }
-
 .sort-button:hover {
     background-color: #2980b9;
 }
-
 .add-button:hover {
     background-color: #ff3d00; /* 빨강 */
 }
-
 /* 오름차순 버튼 스타일 */
 .sort-asc-button {
     background-color: #2ecc71;
 }
-
 /* 내림차순 버튼 스타일 */
 .sort-desc-button {
     background-color: #e74c3c;
@@ -139,10 +131,8 @@ button[type="submit"]:hover {
     justify-content: space-between;
     text-decoration: none;
 }
-
-
 .content_item {
-    flex: 0 0 calc(50% - 20px); /* 3개 항목 가로 배치 + 간격 조정 */
+    flex: 0 0 calc(50% - 20px); /* 2개 항목 가로 배치 + 간격 조정 */
     margin-right: 20px;
     margin-bottom: 20px;
     background-color: #f9f9f9;
@@ -152,36 +142,27 @@ button[type="submit"]:hover {
     text-decoration: none;
     margin-top: 80px;
 }
-
-
 .content_item:last-child {
     margin-right: 0;
     text-decoration: none;
 }
-
 .content_item_inner {
     padding: 10px;
     text-decoration: none;
 }
-
 .content_info span {
     color: #333;
     text-decoration: none; /* 밑줄 삭제 */
-}
-
-span {
     font-size: 18px;
     font-weight: bold;
-    text-decoration: none;
 }
-
 .content_address {
     font-size: 14px;
     color: #555;
     margin-top: 5px;
     text-decoration: none;
 }
-
+/* footer */
 .footer {
     text-align: center;
     margin-top: 40px;
@@ -191,17 +172,13 @@ span {
     line-height: 8px;
     height: 50px;
 }
-
 .logo_text {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
 }
-
 .footer_text {
     font-size: 14px;
     margin-top: 10px;
 }
-
 .footer_copy {
     font-size: 12px;
     margin-top: 10px;

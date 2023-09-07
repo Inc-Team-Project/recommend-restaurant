@@ -68,12 +68,10 @@ main {
     width: 100%;
     margin-top: 10px;
 }
-
 .info th {
     text-align: left;
     font-weight: bold;
 }
-
 .info td {
     text-align: left;
 }
@@ -86,23 +84,19 @@ main {
     text-align: left;
     margin-bottom: 20px; /* Add margin to separate menu and comments */
 }
-
 .menu h3 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
 }
-
 .menu ul {
     list-style-type: none;
     padding-left: 0;
 }
-
 .menu li {
     font-size: 16px;
     margin-bottom: 5px;
 }
-
 /* Style the comments section */
 .comments {
     background-color: #fff;
@@ -111,28 +105,23 @@ main {
     box-shadow: 0 0 3px #FF7200;
     text-align: left;
 }
-
 .comments h3 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
 }
-
 .comments ul {
     list-style-type: none;
     padding-left: 0;
 }
-
 .comments li {
     font-size: 16px;
     margin-bottom: 10px;
 }
-
 /* Style the comment form */
 .comments form {
     margin-top: 20px;
 }
-
 .comments input[type="text"],
 .comments textarea {
     width: 95%;
@@ -142,7 +131,6 @@ main {
     box-shadow: 0 0 3px #FF7200;
     border:none;
 }
-
 .comments button[type="submit"] {
     background-color: #FF7200;
     color: #fff;
@@ -151,65 +139,49 @@ main {
     border-radius: 5px;
     cursor: pointer;
 }
-
-
+/* 댓글 목록 스타일 */
+.comments li {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #FF7200;
+}
+.comments li span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+.comments li p {
+    margin: 0;
+}
 /* 스타 평점 표시 스타일 */
 .star-rating {
     text-align: left;
     margin-bottom: 10px;
 }
-
 .star-rating .star {
     font-size: 30px;
     color: #ccc;
     cursor: pointer;
     transition: color 0.2s;
 }
-/* Style the comment form */
-.comments form {
-    margin-top: 20px;
-}
-
-.comments input[type="text"],
-
-.comments textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.comments button[type="submit"] {
-    background-color: #FF7200;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 /* 댓글 작성 폼 스타일 */
 #rating-form {
     margin-top: 20px;
 }
-
 #rating-form .star-rating {
     text-align: left;
     margin-bottom: 10px;
 }
-
 #rating-form .star-rating .star {
     font-size: 30px;
     color: #ccc;
     cursor: pointer;
     transition: color 0.2s;
 }
-
 #rating-form .star-rating .star.active {
     color: gold; /* 선택된 별표의 색상을 골드로 변경 */
 }
-
 #rating-form textarea {
     width: 98%;
     padding: 10px;
@@ -220,7 +192,6 @@ main {
     box-shadow: 0 0 3px #FF7200;
     border:none;
 }
-
 #rating-form button[type="댓글 작성"] {
     display: block;
     margin-top: 10px;
@@ -246,41 +217,14 @@ main {
     line-height: 8px;
     height: 50px;
 }
-
 .logo_text {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
 }
-
 .footer_text {
     font-size: 14px;
     margin-top: 10px;
 }
-
 .footer_copy {
     font-size: 12px;
     margin-top: 10px;
-}
-
-/* 댓글 목록 스타일 */
-.comments ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.comments li {
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    box-shadow: 0 0 3px #FF7200;
-}
-
-.comments li span {
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.comments li p {
-    margin: 0;
 }

@@ -4,12 +4,10 @@
     padding: 0;
     /* box-sizing: border-box; footer잘려서 주석처리함*/
 }
-
 /* 전체 페이지 스타일 */
 body {
     font-family: Arial, sans-serif;
 }
-
 /* 헤더 스타일 */
 .main_header {
     margin: auto;
@@ -21,7 +19,6 @@ body {
     border-bottom: 2px solid #FF7200;
     margin-bottom: 20px;
 }
-
 .img_logo {
     width: 100px;
     height: 60px;
@@ -29,30 +26,32 @@ body {
     left: 10px;
     top: 5px;
 }
-
-
+/* 데이터 추가 영역 */
 input[type="text"] {
-    padding: 9px;
+    padding: 11px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    width: 60%;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
-
-button[type="submit"] {
-    background-color: #007bff;
+input[type="submit"] {
+    background-color: #FF7200;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 20px;
 }
-
 /* 메인 폼 스타일 */
 .add_form {
-    padding: 10px;
-    height: 512px;
+    padding: 45px;
+    margin-top:30px;
+    min-height: 512px;
 }
-
 .form_div {
     /* max-width: 600px; */
     /* white-space: nowrap; */
@@ -80,24 +79,6 @@ label {
     margin-bottom: 40px;
     margin-top: 10px;
 }
-
-input[type="text"] {
-    width: 60%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-input[type="submit"] {
-    background-color: #FF7200;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 /* 푸터 스타일 */
 .footer {
     text-align: center;
@@ -107,23 +88,19 @@ input[type="submit"] {
     color: white;
     line-height: 8px;
     height: 50px;
+    margin-bottom: 0px;;
 }
-
 .logo_text {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 16px;
 }
-
 .footer_text {
     font-size: 14px;
     margin-top: 10px;
 }
-
 .footer_copy {
     font-size: 12px;
     margin-top: 10px;
 }
-
 /* 숨김 텍스트 스타일 */
 .visually-hidden {
     position: absolute !important;
