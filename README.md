@@ -1,7 +1,7 @@
 # 프로젝트 정보 #
 
 ## 양많다 ##
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/1c0064e4-183b-43ba-9c68-6458cd578699.png" width="800"/>
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/1c0064e4-183b-43ba-9c68-6458cd578699.png" width="300"/>
 
 ### 프로젝트 정보 ###
 - 신세계 I&C 클라우드 엔지니어과정
@@ -51,7 +51,6 @@ $ pip install -r requirements.txt
 
 
 <img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/e570758c-6f35-40de-8be9-c15dde31456c.png" height="80" width="150"/><br> <br> 
-
 
 
 - Development<br> <br>
