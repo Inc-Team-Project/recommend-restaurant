@@ -39,7 +39,6 @@
             <div class="maintitle">
                 <h2>양재역 맛집 리스트</h2>
             </div>
-
             <!-- 검색 바 섹션 -->
             <div class="searchbar">
                 <!-- 검색 폼 추가 -->
@@ -57,40 +56,32 @@
                 </form>
             </div>
         </div>
-
         <!-- 컨텐츠 섹션 -->
         <div class="content">
             <div>
-             <a href="/list" action="한식" class="content_btn" id="koreanFoodButton" >
-                <img class="content_korea img" src="static/korea.jpg" width="250" height="220" alt="한식 이미지" ></br>
-                한식
-            </a>
+                <a href="/list" action="한식" class="content_btn" id="koreanFoodButton" >
+                    <img class="content_korea img" src="static/korea.jpg" width="250" height="220" alt="한식 이미지" ></br>                
+                </a>
             </div>
             <div>
                 <a href="/list" action="중식" class="content_btn" id="chinaFoodButton">
-                    <img class="content_china img" src="static/china.jpg" width="250" height="220" alt="중식 이미지"></br>
-                    중식
-                 </a>
+                    <img class="content_china img" src="static/china.jpg" width="250" height="220" alt="중식 이미지"></br>                    
+                </a>
             </div> 
             <div>
                 <a href="/list" action="일식" class="content_btn" id="japanFoodButton">
-                    <img class="content_jpan img" src="static/japan.jpg" width="250" height="220" alt="일식 이미지"></br>
-                    일식
-                     </a>
+                    <img class="content_jpan img" src="static/japan.jpg" width="250" height="220" alt="일식 이미지"></br>                    
+                </a>
             </div> 
             <div>
-                <a href="/list" action="분식" class="content_btn" id="bunsikFoodButton">
-                    
-                    <img class="content_bun img" src="static/bun.jpg" width="250" height="220" alt="분식 이미지"></br>
-                    분식
-                     </a>
+                <a href="/list" action="분식" class="content_btn" id="bunsikFoodButton">                    
+                    <img class="content_bun img" src="static/bun.jpg" width="250" height="220" alt="분식 이미지"></br>                    
+                </a>
             </div> 
             <div>
-                <a href="/list" action="경양식" class="content_btn" id="jungsikFoodButton">
-                    경양식
-                    <img class="content_jung img" src="static/jung.jpg" width="250" height="220" alt="경양식 이미지"></br>
-               
-                     </a>
+                <a href="/list" action="경양식" class="content_btn" id="jungsikFoodButton">                    
+                    <img class="content_jung img" src="static/jung.jpg" width="250" height="220" alt="경양식 이미지"></br>            
+                </a>
             </div>     
         </div>
     </main>
@@ -103,92 +94,25 @@
     </footer>
     <script>
        
-    // 한식 버튼 요소를 가져옵니다.
-    const koreanFoodButton = document.getElementById('koreanFoodButton');
-    const chinaFoodButton = document.getElementById('chinaFoodButton');
-    const japanFoodButton = document.getElementById('japanFoodButton');
-    const bunsikFoodButton = document.getElementById('bunsikFoodButton');
-    const jungsikFoodButton = document.getElementById('jungsikFoodButton');
-
-    // 한식 버튼을 클릭할 때의 동작을 정의합니다.
-    koreanFoodButton.addEventListener('click', (event) => {
-        // 기본 동작 (링크 이동)을 방지합니다.
-        event.preventDefault();
-
-        // 검색 폼의 input 요소에 '한식'을 설정합니다.
-        const searchForm = document.getElementById('searchForm');
-        const queryInput = searchForm.querySelector('input[name="query"]');
-        queryInput.value = '한식';
-        localStorage.setItem('searchQuery', queryInput.value);
-
-        // 검색 폼을 제출합니다.
-        searchForm.submit();
+        const foodButtons = ['koreanFoodButton', 'chinaFoodButton', 'japanFoodButton', 'bunsikFoodButton', 'jungsikFoodButton'];
+        const foodNames = ['한식', '중식', '일식', '분식', '경양식'];
         
-    });
-
-     // 중식 버튼을 클릭할 때의 동작을 정의합니다.
-      chinaFoodButton.addEventListener('click', (event) => {
-        // 기본 동작 (링크 이동)을 방지합니다.
-        event.preventDefault();
-
-        // 검색 폼의 input 요소에 '중식'을 설정합니다.
-        const searchForm = document.getElementById('searchForm');
-        const queryInput = searchForm.querySelector('input[name="query"]');
-        queryInput.value = '중식';
-        localStorage.setItem('searchQuery', queryInput.value);
-         // 검색 폼을 제출합니다.
-        searchForm.submit();
-    });
-
-     // 일식 버튼을 클릭할 때의 동작을 정의합니다.
-     japanFoodButton.addEventListener('click', (event) => {
-        // 기본 동작 (링크 이동)을 방지합니다.
-        event.preventDefault();
-
-        // 검색 폼의 input 요소에 '일식'을 설정합니다.
-        const searchForm = document.getElementById('searchForm');
-        const queryInput = searchForm.querySelector('input[name="query"]');
-        queryInput.value = '일식';
-        localStorage.setItem('searchQuery', queryInput.value);
-        // 검색 폼을 제출합니다.
-        searchForm.submit();
-    });
-
-     // 분식 버튼을 클릭할 때의 동작을 정의합니다.
-     bunsikFoodButton.addEventListener('click', (event) => {
-        // 기본 동작 (링크 이동)을 방지합니다.
-        event.preventDefault();
-
-        // 검색 폼의 input 요소에 '분식'을 설정합니다.
-        const searchForm = document.getElementById('searchForm');
-        const queryInput = searchForm.querySelector('input[name="query"]');
-        queryInput.value = '분식';
-        localStorage.setItem('searchQuery', queryInput.value);
-        // 검색 폼을 제출합니다.
-        searchForm.submit();
-    });
-
-     // 경양식 버튼을 클릭할 때의 동작을 정의합니다.
-     jungsikFoodButton.addEventListener('click', (event) => {
-        // 기본 동작 (링크 이동)을 방지합니다.
-        event.preventDefault();
-
-        // 검색 폼의 input 요소에 '경양식'을 설정합니다.
-        const searchForm = document.getElementById('searchForm');
-        const queryInput = searchForm.querySelector('input[name="query"]');
-        queryInput.value = '경양식';
-        localStorage.setItem('searchQuery', queryInput.value);
-        // 검색 폼을 제출합니다.
-        searchForm.submit();
-    });
-
-    const searchForm = document.getElementById('searchForm');
-    searchForm.addEventListener('submit', function(event) {
-        // 검색 폼 제출 시 검색어를 로컬 스토리지에 저장
-        const queryInput = searchForm.querySelector('input[name="query"]');
-        localStorage.setItem('searchQuery', queryInput.value);
-    });
-
+        foodButtons.forEach((buttonId, index) => {
+            const button = document.getElementById(buttonId);
+            button.addEventListener('click', (event) => {
+                event.preventDefault();
+                const searchForm = document.getElementById('searchForm');
+                const queryInput = searchForm.querySelector('input[name="query"]');
+                queryInput.value = foodNames[index];
+                localStorage.setItem('searchQuery', queryInput.value);
+                searchForm.submit();
+            });
+        });
+        
+        document.getElementById('searchForm').addEventListener('submit', function(event) {
+            localStorage.setItem('searchQuery', event.target.querySelector('input[name="query"]').value);
+        });
+        
     </script>
 </body>
 </html>

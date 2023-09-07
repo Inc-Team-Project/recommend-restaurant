@@ -34,44 +34,41 @@
         </div>
     </header>
     
-    <!-- 메인 섹션 (가게 정보 입력 폼) -->
-    <main class="add_form">
-        <div class="form_div">
-            <form method="POST" action="/add">
+     <!-- 메인 섹션 (가게 정보 입력 폼) -->
+     <main class="add_form">
+        <div class="form_div">            
+            <div class="form_left">
                 <!-- 가게 이름 입력 필드 -->
-                <label for="REST_Name">가게 이름:</label>
-                <input type="text" id="REST_Name" name="REST_Name" required><br><br>
-
+                <label for="REST_Name">가게 이름:</label><br><br><br>
                 <!-- 음식 종류 입력 필드 -->
-                <label for="REST_Type">음식 종류(한식, 일식, 중식):</label>
-                <input type="text" id="REST_Type" name="REST_Type" required><br><br>
-               
+                <label for="REST_Type">음식 종류(한식, 일식, 중식):</label><br><br><br>
                 <!-- 주소 입력 필드 -->
-                <label for="REST_Address">주소:</label>
-                <input type="text" id="REST_Address" name="REST_Address" required><br><br>
-                
+                <label for="REST_Address">주소:</label><br><br><br>
                 <!-- 웹사이트 입력 필드 -->
-                <label for="REST_Web">웹사이트:</label>
-                <input type="text" id="REST_Web" name="REST_Web"><br><br>
-                
+                <label for="REST_Web">웹사이트:</label><br><br><br>
                 <!-- 전화번호 입력 필드 -->
-                <label for="Tel">전화번호:</label>
-                <input type="text" id="Tel" name="Tel" required><br><br>
-                
+                <label for="Tel">전화번호:</label><br><br><br>
                 <!-- 메뉴 이름 입력 필드 -->
-                <label for="MENU_Name">메뉴 이름:</label>
-                <input type="text" id="MENU_Name" name="MENU_Name" required><br><br>
-                
+                <label for="MENU_Name">메뉴 이름:</label><br><br><br>
                 <!-- 메뉴 가격 입력 필드 -->
-                <label for="MENU_Price">메뉴 가격:</label>
-                <input type="text" id="MENU_Price" name="MENU_Price" required><br><br>
-                
-                <!-- 저장 버튼 -->
-                <input type="submit" value="저장" id="save-button">
-            </form>
-            
+                <label for="MENU_Price">메뉴 가격:</label><br><br><br>
+            </div>
+            <div class="form_right">
+                <!-- 정보 입력 필드 -->
+                <form method="POST" action="/add">
+                    
+                    <input type="text" id="REST_Name" name="REST_Name" required><br>              
+                    <input type="text" id="REST_Type" name="REST_Type" required><br>     
+                    <input type="text" id="REST_Address" name="REST_Address" required><br>
+                    <input type="text" id="REST_Web" name="REST_Web"><br>
+                    <input type="text" id="Tel" name="Tel" required><br>
+                    <input type="text" id="MENU_Name" name="MENU_Name" required><br>
+                    <input type="text" id="MENU_Price" name="MENU_Price" required><br>
+                    <!-- 저장 버튼 -->
+                    <input type="submit" value="저장" id="save-button">
+                </form>
+            <div>        
         </div>
-
     </main>
     
     <!-- 푸터 섹션 -->

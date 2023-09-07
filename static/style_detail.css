@@ -12,14 +12,22 @@ body {
 
 /* Style the header with a background color, padding, and center the logo */
 .main_header {
-    background-color: #333;
-    padding: 20px 0;
-    text-align: left;
+    margin: auto;
+    width: flex;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 2px solid #FF7200;
 }
 
 /* Style the logo image */
 .img_logo {
-    max-width: 150px;
+    width: 100px;
+    height: 60px;
+    position: relative;
+    left: 10px;
+    top: 5px;
 }
 
 /* Center the content in the main section */
@@ -33,7 +41,7 @@ main {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px #FF7200;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,22 +51,17 @@ main {
     text-align: right;
     padding-right: 20px;    
     float:left;
-    width:45%;
+    width:40%;
 }
 .detail_left span {
     font-size: 24px;
     font-weight: bold;
 }
 .detail_right{
-    width: 55%;
+    width: 60%;
     float: right;
     padding-left: 10px;
     border-left:2px solid #FF7200;
-}
-.part{
-    color: #FF7200;
-    font-size: 24px;
-    font-weight: bold;
 }
 /* Style the restaurant info table */
 .info {
@@ -79,7 +82,7 @@ main {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px #FF7200;
     text-align: left;
     margin-bottom: 20px; /* Add margin to separate menu and comments */
 }
@@ -105,7 +108,7 @@ main {
     background-color: #fff;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px #FF7200;
     text-align: left;
 }
 
@@ -132,15 +135,16 @@ main {
 
 .comments input[type="text"],
 .comments textarea {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
+    box-shadow: 0 0 3px #FF7200;
+    border:none;
 }
 
 .comments button[type="submit"] {
-    background-color: #333;
+    background-color: #FF7200;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -161,8 +165,6 @@ main {
     cursor: pointer;
     transition: color 0.2s;
 }
-
-
 /* Style the comment form */
 .comments form {
     margin-top: 20px;
@@ -179,7 +181,7 @@ main {
 }
 
 .comments button[type="submit"] {
-    background-color: #333;
+    background-color: #FF7200;
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -209,20 +211,21 @@ main {
 }
 
 #rating-form textarea {
-    width: 100%;
+    width: 98%;
     padding: 10px;
     margin-top: 10px;
-    border: 1px solid #ccc;
     border-radius: 5px;
     resize: vertical;
     min-height: 100px;
+    box-shadow: 0 0 3px #FF7200;
+    border:none;
 }
 
 #rating-form button[type="댓글 작성"] {
     display: block;
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #FF7200;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -230,25 +233,28 @@ main {
 }
 
 #rating-form button[type="댓글 작성"]:hover {
-    background-color: #0056b3;
+    background-color: #FF7200;
 }
 
 /* Style the footer */
 .footer {
-    background-color: #333;
-    color: #fff;
     text-align: center;
+    /* margin-top: 40px; */
     padding: 20px 0;
+    background-color: #FF7200;
+    color: white;
+    line-height: 8px;
+    height: 50px;
 }
 
 .logo_text {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .footer_text {
-    font-size: 16px;
-    margin-top: 5px;
+    font-size: 14px;
+    margin-top: 10px;
 }
 
 .footer_copy {
@@ -267,7 +273,7 @@ main {
     padding: 10px;
     background-color: #f7f7f7;
     border-radius: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 3px #FF7200;
 }
 
 .comments li span {

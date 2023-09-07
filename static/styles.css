@@ -10,7 +10,7 @@ main {
     background-size: cover; 
     background-repeat: no-repeat;
     background: lightgray; */
-    min-height: 580px;
+    height: 511px;
 }
 a{    
     text-decoration-line:none;
@@ -19,37 +19,36 @@ a{
     text-align: center;
     margin-top: 40px;
     padding: 20px 0;
-    background-color: #413e3e;
-    color: #ffffff;
+    background-color: #FF7200;
+    color: white;
+    line-height: 8px;
+    height: 50px;
 }
 
 .logo_text {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
-    color:#ffffff
 }
 
 .footer_text {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
-    color:#ffffff
 }
 
 .footer_copy {
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 10px;
-    color:#ffffff
 }
 
 /* 헤더 */
 header {
     margin: auto;
     width: flex;
-    height: 0px;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     position: relative;
-    background: lightgray;
+    border-bottom: 2px solid #FF7200;
 }
 .img_logo {
     width: 100px;
@@ -58,16 +57,12 @@ header {
     left: 10px;
     top: 5px;
 }
-.btn{
-    margin: 20px;
-}
 
 /* '가게 추가하기' 버튼 스타일 */
 .btn {
     position: absolute;
-    top: 12x;
     right: 10px;
-    background-color: #f5a623; /* 노랑 */
+    background-color: #FF7200;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -76,14 +71,19 @@ header {
     cursor: pointer;
     outline: none;
     transition: background-color 0.3s;
+    margin: 20px;
 }
 
 /*search*/
 .maintitle{
     position:absolute;
     left: 50%;
-    top: 20%;
+    top: 18%;
     transform: translate(-50%,-20%);
+
+}
+h2{
+    color:#FF7200
 }
 fieldset{
     border:none;
@@ -93,6 +93,7 @@ fieldset{
     left: 50%;
     top: 35%;
     transform: translate(-50%,-65%);
+    width:500px;
 }
 .searchbar_detail{
     position:absolute;
@@ -100,24 +101,27 @@ fieldset{
     top: 10%;
 }
 .search_box input {
-    flex: 12; /* search-box내부에서 9만큼의 크기를 차지(비율) */
+    width:300px; /*search-box내부에서 14만큼의 크기를 차지(비율) */
     height: 46px;
     padding-left: 12px;
-    padding-right: 12px;
-    border: none;
-    outline: none;
+    padding-right: 15px;
+    border-color: 2px #FF7200;
+    box-shadow: 0 0 7px #FF7200;
+    outline:none;
     font-size: 18px;
     border-radius: 8px;
+    border:none;
+    
   }
   .search_box button {
     flex: 2; /* search-box내부에서 1만큼의 크기를 차지(비율) */
     height: 46px;
-    width: 90px;
+    width: 70px;
     margin: 0;
     padding: 0;
     border: none;
     outline: none;
-    background: #ff9a0c;
+    background: #FF7200;
     color: #ffffff;
     border-radius: 8px;
   }
@@ -127,7 +131,7 @@ fieldset{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    top: 350px;
+    top: 260px;
 }
 .content_detail{
     margin-left: 90px;
@@ -149,6 +153,7 @@ li{
     height: 120px;
     margin: 20px;
     font-size: 17px;
+
 }
 .content_item_img{
     margin:0;
@@ -173,4 +178,3 @@ figure {
     padding:0;
     font-size: 12px;
 }
-

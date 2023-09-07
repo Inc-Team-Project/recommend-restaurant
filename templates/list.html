@@ -8,26 +8,42 @@
     <link rel="stylesheet" href="/static/style_list.css">
 </head>
 <body>
-    <div class="container">
-        <main>
-            <h2>검색 결과</h2>
-            <!-- '가게 추가하기' 버튼 -->
-            <button class="btn add-button" onclick="location.href='/add'">
-                가게 추가하기
-            </button>
-            <!-- 검색 폼 추가 -->
-            <form action="/list" method="POST" class="search_box" id="searchForm">
+     <!-- 헤더 섹션 -->
+     <header class="header">
+        <div class="main_header">
+            <a href="/">
+                <img src = 'static/Logo.png' class="img_logo">
+            </a>
+             <!-- 검색 폼 추가 -->
+             <form action="/list" method="POST" class="search_box" id="searchForm">
                 <!-- 검색어 입력 필드에 이전에 입력한 값을 표시 -->
                 <input type="text" name="query" placeholder="검색어 입력" maxlength="225" tabindex="1" value="{{ query|default('') }}" />
                 <button type="submit" tabindex="2">검색</button>
             </form>
+            <!-- '가게 추가하기' 버튼 -->
+            <button class="btn add-button" onclick="location.href='/add'">
+                가게 추가하기
+            </button>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            
             <!-- 정렬 버튼 -->
-            <div class="sort-buttons">
-                <button class="sort-button sort-asc-button" onclick="sortResults('asc')">오름차순 정렬</button>
-                <button class="sort-button sort-desc-button" onclick="sortResults('desc')">내림차순 정렬</button>
+            <div class="search_title">
+                <div>
+                    <h2>검색 결과</h2>
+                </div>
+                <div >
+                    <button class="sort-button sort-asc-button" onclick="sortResults('asc')">오름차순 정렬</button>
+                    <button class="sort-button sort-desc-button" onclick="sortResults('desc')">내림차순 정렬</button>
+                </div>
+                    
             </div>
            
             <!-- 검색 결과 목록 -->
+
+        <div>
             <ul class="content_detail">
                 {% for item in results %}
                 <li class="content_item">
@@ -65,7 +81,7 @@
                                             <span>{{ item.REST_Name }}</span>
                                         </a>
                                         <p class="content_address">주소 : {{ item.REST_Address }}</p>
-                                        <p>전화번호 : {{ item.Tel }}</p>
+                                        <p class="content_address">전화번호 : {{ item.Tel }}</p>
                                         
                                     </div>
                                 </figcaption>
@@ -75,15 +91,15 @@
                 </li>
                 {% endfor %}
             </ul>
-                        
-        </main>
-        <footer class="footer">
-            <span class="logo_text">양.많.다</span>
-            <P class="footer_text">Find your Best Restaurant</P>
-            <div class="footer_copy">Copyright 2023 양.많.다., Inc. Terms & Privacy</div>
-        </footer>
+        </div>             
+       
     </div>
-
+</main>
+<footer class="footer">
+    <span class="logo_text">양.많.다</span>
+    <P class="footer_text">Find your Best Restaurant</P>
+    <div class="footer_copy">Copyright 2023 양.많.다., Inc. Terms & Privacy</div>
+</footer>
     <script>
         let sortOrder = 'asc'; // 초기 정렬 순서
 
@@ -132,5 +148,3 @@
 </body>
 </html>
 
-</body>
-</html>

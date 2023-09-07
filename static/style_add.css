@@ -2,7 +2,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; footer잘려서 주석처리함*/
 }
 
 /* 전체 페이지 스타일 */
@@ -12,16 +12,22 @@ body {
 
 /* 헤더 스타일 */
 .main_header {
+    margin: auto;
+    width: flex;
+    height: 70px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
+    position: relative;
+    border-bottom: 2px solid #FF7200;
+    margin-bottom: 20px;
 }
 
 .img_logo {
-    width: 150px;
+    width: 100px;
+    height: 60px;
+    position: relative;
+    left: 10px;
+    top: 5px;
 }
 
 
@@ -43,30 +49,48 @@ button[type="submit"] {
 
 /* 메인 폼 스타일 */
 .add_form {
-    padding: 20px;
+    padding: 10px;
+    height: 512px;
 }
 
 .form_div {
-    max-width: 400px;
-    margin: 0 auto;
+    /* max-width: 600px; */
+    /* white-space: nowrap; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
+.form_left{
+    text-align: right;
+    float:left;
+    width:40%;
+    height:480px;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+.form_right{
+    width: 60%;
+    height:480px;
+    float: right;
+    padding-left: 10px;
+    border-left:2px solid #FF7200;
+}
 label {
     font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
+    margin-bottom: 40px;
+    margin-top: 10px;
 }
 
 input[type="text"] {
-    width: 100%;
+    width: 60%;
     padding: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
 input[type="submit"] {
-    background-color: #007bff;
+    background-color: #FF7200;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -76,19 +100,22 @@ input[type="submit"] {
 
 /* 푸터 스타일 */
 .footer {
-    background-color: transparent;
-    color: #fff;
     text-align: center;
-    padding: 20px;
+    /* margin-top: 40px; */
+    padding: 20px 0;
+    background-color: #FF7200;
+    color: white;
+    line-height: 8px;
+    height: 50px;
 }
 
 .logo_text {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
 }
 
 .footer_text {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
 }
 

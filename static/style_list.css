@@ -9,29 +9,50 @@ a {
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
-
+/* 헤더 */
+header {
+    margin: auto;
+    width: flex;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: 2px solid #FF7200;
+}
+.main_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img_logo {
+    width: 100px;
+    height: 60px;
+    position: relative;
+    left: 10px;
+    top: 5px;
+}
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     font-size: 24px;
-    margin-bottom: 20px;
+    margin-top:0px;
+    margin-bottom: 0;
     text-decoration: none;
 }
 
 .search_box {
+    
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-left: 40px;
 }
 
 input[type="text"] {
@@ -45,15 +66,16 @@ input[type="text"] {
 }
 
 button[type="submit"] {
-    background-color: #f5a623; /* 노랑 */
+    background-color: #FF7200; /* 노랑 */
     color: #fff;
     border: none;
     border-radius: 4px;
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 9px 15px;
+    font-size: 14px;
     cursor: pointer;
     outline: none;
     transition: background-color 0.3s;
+    margin-left:10px;
 }
 
 button[type="submit"]:hover {
@@ -63,9 +85,8 @@ button[type="submit"]:hover {
 /* '가게 추가하기' 버튼 스타일 */
 .add-button {
     position: absolute;
-    top: 10px;
     right: 10px;
-    background-color: #f5a623; /* 노랑 */
+    background-color: #FF7200; /* 노랑 */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -74,20 +95,22 @@ button[type="submit"]:hover {
     cursor: pointer;
     outline: none;
     transition: background-color 0.3s;
+    margin:20px;
 }
 
 /* 오름차순과 내림차순 정렬 버튼 스타일 */
 .sort-button {
-    background-color: #3498db;
+    /* background-color: #3498db; */
     color: #fff;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    margin: 0 10px;
+    margin: -19px 10px;
     cursor: pointer;
     transition: background-color 0.3s;
     font-size: 14px; /* 버튼 텍스트 크기 조절 */
     font-weight: bold; /* 버튼 텍스트 굵게 설정 */
+    float: right;
 }
 
 .sort-button:hover {
@@ -123,10 +146,11 @@ button[type="submit"]:hover {
     margin-right: 20px;
     margin-bottom: 20px;
     background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 1px 2px #FF7200;
     border-radius: 4px;
     overflow: hidden;
     text-decoration: none;
+    margin-top: 80px;
 }
 
 
@@ -151,7 +175,7 @@ span {
     text-decoration: none;
 }
 
-.content_address, p {
+.content_address {
     font-size: 14px;
     color: #555;
     margin-top: 5px;
@@ -162,24 +186,23 @@ span {
     text-align: center;
     margin-top: 40px;
     padding: 20px 0;
-    background-color: #ffffff;
-    color: #fff;
+    background-color: #FF7200;
+    color: white;
+    line-height: 8px;
+    height: 50px;
 }
 
 .logo_text {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
-    color:#333
 }
 
 .footer_text {
-    font-size: 16px;
+    font-size: 14px;
     margin-top: 10px;
-    color:#333
 }
 
 .footer_copy {
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 10px;
-    color:#333
 }
