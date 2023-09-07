@@ -1,7 +1,7 @@
 # 프로젝트 정보 #
 
 ## 양많다 ##
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/1c0064e4-183b-43ba-9c68-6458cd578699.png" width="300"/>
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/1c0064e4-183b-43ba-9c68-6458cd578699.png" height="150" width="250"/>
 
 ### 프로젝트 정보 ###
 - 신세계 I&C 클라우드 엔지니어과정
@@ -46,7 +46,8 @@ $ . .venv/Scripts/activate
 $ pip install -r requirements.txt
 
 ### 기술 스택 ###
-#### Environment<br> <br>
+#### Environment
+<br> <br>
 <img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/8b88210b-072f-4d4d-8cd7-f2b7335178ff.png" heigh="80" width="80"/> 
 &nbsp; &nbsp;
 
@@ -56,7 +57,8 @@ $ pip install -r requirements.txt
 <img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/65592f6b-02d5-4a56-8083-a1e3dc0b6973.png" height="80" width="80"/>
 <br> <br>
 
-#### Development<br> <br>
+#### Development
+<br> <br>
 <img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/d5ad48cb-fcb0-4400-ad14-3312f6267c33.png" height="80" width="150"/>
 &nbsp; &nbsp; &nbsp;
 
