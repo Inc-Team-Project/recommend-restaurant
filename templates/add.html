@@ -9,7 +9,6 @@
     <title>Document</title>
     <!-- 외부 스타일시트 링크 -->
     <link rel="stylesheet" href="/static/style_add.css">
-    
     <!-- 스타일 추가 (레전드가 화면에 보이지 않게 함) -->
     <style>
         .visually-hidden {
@@ -43,7 +42,7 @@
                 <!-- 음식 종류 입력 필드 -->
                 <label for="REST_Type">음식 종류(한식, 일식, 중식):</label><br><br><br>
                 <!-- 주소 입력 필드 -->
-                <label for="REST_Address">주소:</label><br><br><br>
+                <label for="REST_Address">주소:</label>                <br><br><br>
                 <!-- 웹사이트 입력 필드 -->
                 <label for="REST_Web">웹사이트:</label><br><br><br>
                 <!-- 전화번호 입력 필드 -->
@@ -59,7 +58,9 @@
                     
                     <input type="text" id="REST_Name" name="REST_Name" required><br>              
                     <input type="text" id="REST_Type" name="REST_Type" required><br>     
-                    <input type="text" id="REST_Address" name="REST_Address" required><br>
+                    <input type="text" id="REST_Address" name="REST_Address" required readonly>
+                    <button type="button" id="addressSearch" onclick="findAddr()">주소 검색</button>
+                    <br>
                     <input type="text" id="REST_Web" name="REST_Web"><br>
                     <input type="text" id="Tel" name="Tel" required><br>
                     <input type="text" id="MENU_Name" name="MENU_Name" required><br>
@@ -106,7 +107,24 @@
                 }
             });
         });
-          
+
+        //주소 검색 기능
+        function findAddr(){
+            new daum.Postcode({
+                oncomplete: function(data){
+                    var addr = '';
+                    if(data.userSelectedType === 'R'){
+                        addr = data.roadAddress;
+                    } else{
+                        addr = data.jibunAddress;
+                    }
+                    document.getElementById('REST_Address').value = addr;
+                    //$("REST_Address").val(addr);
+                }
+            }).open();
+        }
     </script>
+    <!-- 주소 API -->
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </body>
 </html>

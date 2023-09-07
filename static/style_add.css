@@ -79,6 +79,15 @@ label {
     margin-bottom: 40px;
     margin-top: 10px;
 }
+button{
+    background-color: #FF7200;
+    color: #fff;
+    border: none;
+    height: 35px;
+    width: 70px;
+    border-radius: 5px;
+    
+}
 /* 푸터 스타일 */
 .footer {
     text-align: center;
