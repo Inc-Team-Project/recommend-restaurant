@@ -47,17 +47,17 @@ $ pip install -r requirements.txt
 
 ### 기술 스택 ###
 - Environment<br> <br>
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/8b88210b-072f-4d4d-8cd7-f2b7335178ff.png" heigh="80" width="80"/><br> <br> 
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/8b88210b-072f-4d4d-8cd7-f2b7335178ff.png" heigh="80" width="80"/> 
 
 
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/e570758c-6f35-40de-8be9-c15dde31456c.png" height="80" width="150"/><br> <br> 
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/e570758c-6f35-40de-8be9-c15dde31456c.png" height="80" width="150"/>
 
 
 - Development<br> <br>
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/d5ad48cb-fcb0-4400-ad14-3312f6267c33.png" height="80" width="150"/><br> <br> 
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/d5ad48cb-fcb0-4400-ad14-3312f6267c33.png" height="80" width="150"/>
 
 
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/808ffa17-f0bd-4810-8ca9-6c9f8ba1a3dd.png" height="80" width="80"/><br> <br> 
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/808ffa17-f0bd-4810-8ca9-6c9f8ba1a3dd.png" height="80" width="80"/> 
 
 
   # 화면 구성 #
