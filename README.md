@@ -47,14 +47,21 @@ $ pip install -r requirements.txt
 
 ### 기술 스택 ###
 - Environment
-  - VISUAL STUDIO CODE <img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/8b88210b-072f-4d4d-8cd7-f2b7335178ff.png" heigh="30" width="30"/>
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/8b88210b-072f-4d4d-8cd7-f2b7335178ff.png" heigh="30" width="30"/>
 
-  - GITHUB
-  - VMware
+
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/e570758c-6f35-40de-8be9-c15dde31456c.png" height="30" width="30"/>
+
+
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/2d691232-f1a3-4478-b360-8dbac95004f6.png" height="30" width="30"/>
+
 - Development
-  - JAVASCRIPT
-  - HTML
-  - MariaDB
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/d5ad48cb-fcb0-4400-ad14-3312f6267c33.png" height="30" width="30"/>
+
+
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/808ffa17-f0bd-4810-8ca9-6c9f8ba1a3dd.png" height="30" width="30"/>
+
 
   # 화면 구성 #
+  
   # 주요 기능 #
