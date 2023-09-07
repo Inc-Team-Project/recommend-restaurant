@@ -1,7 +1,7 @@
 # 프로젝트 정보 #
 
 ## 양많다 ##
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/1c0064e4-183b-43ba-9c68-6458cd578699.png" width="300"/>
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/1c0064e4-183b-43ba-9c68-6458cd578699.png" width="500"/>
 
 ### 프로젝트 정보 ###
 - 신세계 I&C 클라우드 엔지니어과정
@@ -47,19 +47,19 @@ $ pip install -r requirements.txt
 
 ### 기술 스택 ###
 - Environment
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/8b88210b-072f-4d4d-8cd7-f2b7335178ff.png" heigh="30" width="30"/>
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/8b88210b-072f-4d4d-8cd7-f2b7335178ff.png" heigh="50" width="50"/><br/> 
 
 
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/e570758c-6f35-40de-8be9-c15dde31456c.png" height="30" width="30"/>
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/e570758c-6f35-40de-8be9-c15dde31456c.png" height="50" width="50"/><br/> 
 
 
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/2d691232-f1a3-4478-b360-8dbac95004f6.png" height="30" width="30"/>
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/2d691232-f1a3-4478-b360-8dbac95004f6.png" height="50" width="50"/><br/> 
 
 - Development
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/d5ad48cb-fcb0-4400-ad14-3312f6267c33.png" height="30" width="30"/>
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/d5ad48cb-fcb0-4400-ad14-3312f6267c33.png" height="50" width="50"/><br/> 
 
 
-<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/808ffa17-f0bd-4810-8ca9-6c9f8ba1a3dd.png" height="30" width="30"/>
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/808ffa17-f0bd-4810-8ca9-6c9f8ba1a3dd.png" height="50" width="50"/><br/> 
 
 
   # 화면 구성 #
