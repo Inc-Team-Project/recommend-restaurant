@@ -47,7 +47,7 @@ $ pip install -r requirements.txt
 
 ### 기술 스택 ###
 - Environment
-  - VISUAL STUDIO CODE <img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/8b88210b-072f-4d4d-8cd7-f2b7335178ff.png" heigh="100" width="100"/>
+  - VISUAL STUDIO CODE <img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/8b88210b-072f-4d4d-8cd7-f2b7335178ff.png" heigh="10" width="10"/>
 
   - GITHUB
   - VMware
