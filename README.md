@@ -6,7 +6,7 @@
 ### 프로젝트 정보 ###
 - 신세계 I&C 클라우드 엔지니어과정
 - 기간 : 9/1 ~ 9/7
-
+- 최종 보고서 : https://docs.google.com/presentation/d/1geOf9NnheR3d5HVOaDb9DNGMGVdVyS_A/edit?usp=drive_link&ouid=106564867001653478795&rtpof=true&sd=true
 ### 팀 소개 ###
 - 김태윤
 - 김희수
