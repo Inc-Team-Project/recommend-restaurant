@@ -1,3 +1,30 @@
+# 프로젝트 정보 #
+
+## 양많다 ##
+<img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/1c0064e4-183b-43ba-9c68-6458cd578699.png" width="300"/>
+
+### 프로젝트 정보 ###
+- 신세계 I&C 클라우드 엔지니어과정
+- 기간 : 9/1 ~ 9/7
+
+### 팀 소개 ###
+- 김태윤
+- 김희수
+- 곽민주
+- 이진욱
+
+### 프로젝트 소개 ###
+- 양재역 인근 맛집 공유
+- 댓글 기능을 통해서 구체적으로 식당 소개 가능
+- 한식, 중식, 일식, 경양식, 일식 카테고리 선택 가능
+
+# 시작 가이드 #
+
+### 요구 사항 ###
+- VMware CenstOS8
+- MariaDB-10.4.10
+  
+### 개발 환경 설정 ###
 다음과 같이 패치합니다.
 
 $ git init
@@ -17,3 +44,16 @@ $ python -m venv .venv
 $ . .venv/Scripts/activate
 
 $ pip install -r requirements.txt
+
+### 기술 스택 ###
+- Environment
+  - VISUAL STUDIO CODE
+  - GITHUB
+  - VMware
+- Development
+  - JAVASCRIPT
+  - HTML
+  - MariaDB
+
+  # 화면 구성 #
+  # 주요 기능 #
