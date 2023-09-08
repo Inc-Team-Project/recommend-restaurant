@@ -83,6 +83,7 @@ $ pip install -r requirements.txt
 - html
 - css
 - js
+  <img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/67572168/2c1add97-943a-4568-9031-b60cbe975f06">
 
   # 화면 구성 #
   
