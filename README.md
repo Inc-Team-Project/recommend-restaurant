@@ -1,7 +1,7 @@
 # 프로젝트 정보 #
 
 ## 양많다 ##
-<img src="[https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/1c0064e4-183b-43ba-9c68-6458cd578699](https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/9ed4fb08-01b2-4fdf-843d-1fa7fd115c6a).png" height="150" width="250"/>
+<img src="[[https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/1c0064e4-183b-43ba-9c68-6458cd578699](https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/9ed4fb08-01b2-4fdf-843d-1fa7fd115c6a).png](https://github.com/Inc-Team-Project/recommend-restaurant/assets/61976898/ac4ba70b-2f82-46da-955a-1f093dbaad2d)" height="150" width="250"/>
 
 ### 프로젝트 정보 ###
 - 신세계 I&C 클라우드 엔지니어과정
