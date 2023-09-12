@@ -86,5 +86,7 @@ $ pip install -r requirements.txt
   <img src="https://github.com/Inc-Team-Project/recommend-restaurant/assets/67572168/2c1add97-943a-4568-9031-b60cbe975f06">
 
   # 화면 구성 #
+
+  https://www.figma.com/file/iG98cDuqg27MagPqhCL1Id/%EC%96%91.%EB%A7%8E.%EB%8B%A4?type=design&node-id=0%3A1&mode=design&t=jLrnxURaewRqmDnm-1
   
   # 주요 기능 #
